@@ -6,14 +6,29 @@ var g3 = new Audio('assets/g3.mp3');
 var a3 = new Audio('assets/a3.mp3');
 var b3 = new Audio('assets/b3.mp3');
 var c4 = new Audio('assets/c4.mp3');
+var d4 = new Audio('assets/d4.mp3');
+var e4 = new Audio('assets/e4.mp3');
+
+var db3 = new Audio('assets/db3.mp3');
+var eb3 = new Audio('assets/eb3.mp3');
+var gb3 = new Audio('assets/gb3.mp3');
+var ab3 = new Audio('assets/ab3.mp3');
+var bb3 = new Audio('assets/bb3.mp3');
+var cb4 = new Audio('assets/cb4.mp3');
+var db4 = new Audio('assets/db4.mp3');
+var eb4 = new Audio('assets/eb4.mp3');
+var kick = new Audio('assets/kick.mp3');
+var snare = new Audio('assets/snare.mp3');
+var hat = new Audio('assets/hat.mp3');
 
 noteLog = [];
 
-var playKey = function(keyCodeNum, soundNote, noteNum, divString) {
+var playKey = function(keyCodeNum, soundNote, noteNum, divString, keyUpColor) {
 
   $(document).ready(function () {
       $('body').keydown(function(e){
           if(e.keyCode == keyCodeNum){
+            soundNote.currentTime = 0;
             soundNote.play();
             divString.css("background-color", "lightgrey");
           }
@@ -24,7 +39,7 @@ var playKey = function(keyCodeNum, soundNote, noteNum, divString) {
       $('body').keyup(function(e){
           if(e.keyCode == keyCodeNum){
             soundNote.pause();
-            divString.css("background-color", "white");
+            divString.css("background-color", keyUpColor);
             noteLog.push(noteNum);
             console.log(noteLog);
           }
@@ -32,16 +47,31 @@ var playKey = function(keyCodeNum, soundNote, noteNum, divString) {
     })
 }
 
-playKey(65, c3, 1, $(".c3"));
-playKey(83, d3, 2, $(".d3"));
-playKey(68, e3, 3, $(".e3"));
-playKey(70, f3, 4, $(".f3"));
-playKey(71, g3, 5, $(".g3"));
-playKey(72, a3, 6, $(".a3"));
-playKey(74, b3, 7, $(".b3"));
-playKey(75, c4, 8, $(".c4"));
-playKey(76, c4, 9, $(".c4"));
-playKey(186, c4, 10, $(".c4"));
+//white notes
+playKey(65, c3, 1, $(".c3"), "white");
+playKey(83, d3, 2, $(".d3"), "white");
+playKey(68, e3, 3, $(".e3"), "white");
+playKey(70, f3, 4, $(".f3"), "white");
+playKey(71, g3, 5, $(".g3"), "white");
+playKey(72, a3, 6, $(".a3"), "white");
+playKey(74, b3, 7, $(".b3"), "white");
+playKey(75, c4, 8, $(".c4"), "white");
+playKey(76, d4, 9, $(".d4"), "white");
+playKey(186, e4, 10, $(".e4"), "white");
+
+//black notes
+playKey(87, db3, 2, $(".db3"), "darkgrey");
+playKey(69, eb3, 2, $(".eb3"), "darkgrey");
+playKey(84, gb3, 2, $(".gb3"), "darkgrey");
+playKey(89, ab3, 2, $(".ab3"), "darkgrey");
+playKey(85, bb3, 2, $(".bb3"), "darkgrey");
+playKey(79, db4, 2, $(".db4"), "darkgrey");
+playKey(80, eb4, 2, $(".eb4"), "darkgrey");
+
+//drums
+playKey(49, kick, 2, $(".kick"), "white");
+playKey(50, snare, 2, $(".snare"), "white");
+playKey(51, hat, 2, $(".hat"), "white");
 
 
 
