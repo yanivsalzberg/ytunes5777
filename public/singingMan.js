@@ -20,6 +20,7 @@ function draw() {
   stroke(0);
   var vol = mic.getLevel()
   fill(random(255), 255, 255);
+  //colored cursor
   var d = map(10*mouseY, 0, height, 10, 50);
   ellipse(mouseX, mouseY, d, d);
   //head
@@ -45,6 +46,6 @@ function draw() {
   ellipse(770, 130, 19, 19);
   //mouth
   fill (255, 0, 0)
-  ellipse(720, 210, 100, vol*500)
+  ellipse(720, 210, 100, vol*300)
 
 }

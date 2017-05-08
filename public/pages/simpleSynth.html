@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Starter Template (3.0)</title>
+		<title>Simple Synth</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -12,31 +12,15 @@
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
-	<body>
+	<body style="background: goldenrod;">
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">yTunes</a>
+
+
     </div>
     <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Play</a></li>
-        <li><a href="#about">Simon</a></li>
-        <li><a href="#contact">Recorder</a></li>
-				<li><a href="#contact">Visualizer</a></li>
-				<li><a href="#contact">Weather-Tunes</a></li>
-				<li><a href="#contact">KAREOKE</a></li>
-				<li><a href="#contact">overdubbing with Socket.IO</a></li>
-				<li><a href="#contact">Theory</a></li>
-				<li><a href="#contact">One-String-Method</a></li>
-				<li><a href="#contact">Resources</a></li>
-				<li><a href="#contact">Blog</a></li>
-      </ul>
+
     </div><!--/.nav-collapse -->
   </div>
 </div>
@@ -98,6 +82,23 @@
 		osc.onmouseup = function(){
 			oscillator.disconnect();
 		};
+
+
+		//keypress and release
+		onkeydown=function(){
+		var oscPitch = document.getElementById('oscPitch').value;
+
+		oscillator.frequency.value = oscPitch;
+		var waveform = document.getElementById("waveform").value;
+		oscillator.type = waveform;
+
+		oscillator.connect(context.destination);
+		oscillator.start(0);
+	};
+
+	onkeyup = function(){
+		oscillator.disconnect();
+	};
 
 		</script>
 
