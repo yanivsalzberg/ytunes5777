@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- this line removes any default padding and style. you might only need one of these values set. -->
+  <link href="p5piano.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>yTunes</title>
+</head>
+
+<body ng-controller="mainController">
+
+  <nav class="navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand hme" href="index.html">yTunes</a>
+        <a class="navbar-brand lnk" href="#">youTubeJammer</a>
+        <a class="navbar-brand lnk" href="singingMan.html">singEmoji</a>
+        <a class="navbar-brand lnk" href="pages/simpleSynth.html">simpleSynth</a>
+        <a class="navbar-brand lnk" href="#">hypeMan</a>
+        <a class="navbar-brand lnk" align="right" href="pages/resources.html">resources</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+    <div align="center" class="col-6" ng>
+
+      <ul class="set">
+
+        <li class="white c3">a</li>
+      	<li class="black db3">w</li>
+        <li class="white fat d3">s</li>
+        <li class="black eb3">e</li>
+        <li class="white fat e3">d</li>
+      	<li class="white f3">f</li>
+        <li class="black gb3">t</li>
+      	<li class="white fat g3">g</li>
+        <li class="black ab3">y</li>
+        <li class="white fat a3">h</li>
+        <li class="black bb3">u</li>
+        <li class="white fat b3">j</li>
+      	<li class="white c4">k</li>
+      	<li class="black db4">o</li>
+      	<li class="white fat d4">l</li>
+      	<li class="black eb4">p</li>
+      	<li class="white fat e4">;</li>
+      </ul>
+
+<button type="button" class="kick btn btn-default">1-kick</button>
+<button type="button" class="snare btn btn-default">2-snare</button>
+<button type="button" class="hat btn btn-default">3-hi-hat</button>
+<button type="button" class="btn btn-default">4-loop</button>
+<button type="button" class="btn btn-default">5-loop</button>
+<button type="button" id="saveSong" onclick class="btn btn-default">save</button>
+<button type="button" class="btn btn-default">playback</button>
+<br>
+
+    </div>
+    <div class="txt">
+    </div>
+
+    <script language="javascript" type="text/javascript" src="p5Library/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="p5Library/p5.sound.js"></script>
+    <script language="javascript" type="text/javascript" src="p5Library/p5.dom.js"></script>
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="playthenotes.js"></script>
+
+</body>
+
+</html>
