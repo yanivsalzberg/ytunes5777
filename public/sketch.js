@@ -26,12 +26,10 @@ function draw() {
   ellipse(720, 80, 1000, vol*100)
   fill (255, 127, 80)
   ellipse(720, 110, 1000, vol*100)
-  fill (255, 0, 0)
-  ellipse(720, 140, 100, vol*500)
+
   fill (0, 255, 0)
-  ellipse(520, 140, 100, vol*500)
-  fill (0, 0, 255)
-  ellipse(920, 140, 100, vol*500)
+  ellipse(720, 140, 1000, vol*100)
+
   fill (0, 100, 0)
   ellipse(720, 170, 1000, vol*100)
   fill (0, 0, 255)

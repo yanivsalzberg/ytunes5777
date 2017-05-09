@@ -28,10 +28,10 @@ function draw() {
   ellipse(720, 160, 255, 275);
   //left eye
   fill (255);
-  ellipse(670, 130, 60, 60);
+  ellipse(670, 130, 60, 40);
   //right eye
   fill (255);
-  ellipse(770, 130, 60, 60);
+  ellipse(770, 130, 60, 40);
   //cornea left eye
   // fill (255,2);
   // ellipse(670, 120, 19, 19);
