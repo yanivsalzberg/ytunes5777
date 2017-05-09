@@ -9,8 +9,8 @@ var app = express();
 // mongoose.connect('mongodb://localhost/songs');
 
 
-// app.use(express.static('public'));
-// app.use(express.static('node_modules'));
+app.use(express.static('public'));
+app.use(express.static('node_modules'));
 
 // var Schema = mongoose.Schema;
 // var songSchema = new Schema({
@@ -36,6 +36,6 @@ var app = express();
 //
 // })
 //
-// app.listen(8000, function() {
-//   console.log("Serv's up, brah! 8000");
-// });
+app.listen(8000, function() {
+   console.log("Serv's up, brah! 8000");
+ });
