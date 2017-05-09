@@ -1,0 +1,24 @@
+{
+  "name": "ytunes5777",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanivsalzberg/ytunes5777.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanivsalzberg/ytunes5777/issues"
+  },
+  "homepage": "https://github.com/yanivsalzberg/ytunes5777#readme"
+}
